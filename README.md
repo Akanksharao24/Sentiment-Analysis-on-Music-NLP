@@ -1,5 +1,3 @@
-Certainly! Here's a detailed report that you can use for your GitHub README file:
-
 ---
 
 # Sentiment Analysis on Song Lyrics
@@ -55,5 +53,3 @@ Feel free to contribute to this project by adding new features, improving existi
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-Feel free to customize the report based on your preferences and additional details you want to include.
