@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository contains a Python script for performing sentiment analysis on song lyrics. The analysis is based on the VADER (Valence Aware Dictionary and sEntiment Reasoner) sentiment analysis tool from the Natural Language Toolkit (NLTK). The script allows users to analyze the sentiment of lyrics for a single artist or compare the sentiment between two artists.
+This repository contains a Python script for performing sentiment analysis on song lyrics. The analysis is based on the VADER (Valence Aware Dictionary and sentiment Reasoner) sentiment analysis tool from the Natural Language Toolkit (NLTK). The script allows users to analyze the sentiment of lyrics for a single artist or compare the sentiment between two artists.
 
 ## Dependencies
 
@@ -50,6 +50,6 @@ Feel free to contribute to this project by adding new features, improving existi
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ---
