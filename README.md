@@ -1,4 +1,4 @@
-# Sentiment Analysis of Lyrics - README
+# Sentiment Analysis of Lyrics
 
 ## Introduction
 
