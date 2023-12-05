@@ -1,55 +1,41 @@
----
+# Sentiment Analysis of Lyrics - README
 
-# Sentiment Analysis on Song Lyrics
+## Introduction
 
-## Overview
+This project focuses on analyzing the sentiment of lyrics from various artists using Natural Language Processing (NLP) techniques. The sentiment analysis is performed using the VADER (Valence Aware Dictionary and sentiment Reasoner) sentiment analysis tool from the NLTK library. The goal is to understand the distribution of positive, negative, and neutral sentiments in the lyrics of different artists and to compare the sentiment percentages between selected artists.
 
-This repository contains a Python script for performing sentiment analysis on song lyrics. The analysis is based on the VADER (Valence Aware Dictionary and sentiment Reasoner) sentiment analysis tool from the Natural Language Toolkit (NLTK). The script allows users to analyze the sentiment of lyrics for a single artist or compare the sentiment between two artists.
+## Code Structure
 
-## Dependencies
+The code is organized into two main functions: `perform_sentiment_analysis` and `compare_sentiment_analysis`. Additionally, there is a section for reading datasets, user input, and a few utility functions.
 
-- Python 3
-- pandas
-- nltk
-- matplotlib
-- numpy
-- tqdm
+### `perform_sentiment_analysis`
 
-You can install the required dependencies using the following command:
+This function takes a DataFrame containing lyrics data for a specific artist and performs sentiment analysis on the lyrics using the VADER sentiment analyzer. The sentiment scores are then used to categorize the comments into positive, negative, and neutral sentiments. The results are displayed in both a pie chart and a bar graph for visual representation.
 
-```bash
-pip install pandas nltk matplotlib numpy tqdm
-```
+### `compare_sentiment_analysis`
 
-## How to Use
+This function compares the sentiment analysis results between two or more artists. It utilizes the `perform_sentiment_analysis` function for individual artists and then compares their sentiment percentages. The comparison results are displayed using bar graphs, providing a visual representation of the differences in sentiment distribution.
 
-### 1. Analyze the Sentiment of a Single Artist
+## Data and Artists
 
-Run the script and choose option 1 when prompted. Then, select the artist you want to analyze from the provided list. The script will generate a detailed sentiment analysis report, including the distribution of sentiment in the artist's lyrics and a bar graph of compound sentiment scores.
+The project uses lyrics datasets for multiple artists, including Ariana Grande, Beyonce, Billie Eilish, Ed Sheeran, Justin Bieber, Katy Perry, Charlie Puth, Maroon 5, Post Malone, Rihanna, Selena Gomez, Coldplay, Drake, and Dua Lipa. These datasets are read from CSV files, and the lyrics data is processed for sentiment analysis.
 
-### 2. Compare the Sentiment of Two Artists
+## Usage
 
-Run the script and choose option 2 when prompted. Select the first and second artists you want to compare from the provided list. The script will generate individual sentiment analysis reports for each artist and a bar graph for visual comparison.
+The user is prompted to choose between two options:
+1. Analyze the sentiment of a single artist.
+2. Compare the sentiment of two artists.
 
-## Datasets
+For option 1, the user selects an artist from the provided list, and the sentiment analysis results are displayed, including visual representations.
 
-The script comes with pre-loaded datasets for several artists, including Ariana Grande, Beyonce, Billie Eilish, Ed Sheeran, Justin Bieber, Katy Perry, Charlie Puth, Maroon 5, Post Malone, Rihanna, Selena Gomez, Coldplay, Drake, and Dua Lipa. Users can easily add their own datasets by following the provided format.
+For option 2, the user selects two artists from the list, and the sentiment analysis results are compared and displayed in a bar graph. Additionally, the code provides a detailed comparison between the selected artists based on positive, negative, and neutral sentiment percentages.
 
-## Results
+## Visualizations
 
-The script outputs the following results:
+The project includes visualizations such as pie charts and bar graphs to better understand the distribution of sentiment in lyrics. These visualizations aim to provide a clear overview of the sentiments present in the lyrics of each artist and facilitate easy comparison between selected artists.
 
-- Percentage of positive, negative, and neutral comments for each artist.
-- Distribution of sentiment in lyrics through a pie chart.
-- Individual sentiment analysis bar graph for each artist.
-- Visual comparison of sentiment analysis results between two artists.
+## Conclusion
 
-## Contributions
+This sentiment analysis project provides insights into the emotional tone of lyrics from various artists. The comparison feature allows users to explore and understand the differences in sentiment distribution between two selected artists. The code can be further extended to include more artists or additional features for a more comprehensive analysis.
 
-Feel free to contribute to this project by adding new features, improving existing functionality, or providing feedback. Create a pull request or open an issue to get started.
-
-## License
-
-This project is licensed under the MIT License.
-
----
+The provided Python script, when run, enables users to interactively explore and compare sentiment analysis results for lyrics of different artists.
