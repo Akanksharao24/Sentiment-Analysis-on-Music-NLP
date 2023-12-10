@@ -37,51 +37,38 @@ Incorporating a user-friendly interface for the specific domain of music lyrics 
 
 The code uses multiple datasets, each representing the song lyrics of a specific artist. The datasets are loaded using the Pandas library and are in CSV format.
 
-```markdown
-**Data Sets Used:**
+Data Sets Used:
+1. *Ariana Grande (df_a):*
+- Dataset loaded from '/content/ArianaGrande.csv'.
+  
+2. *Beyonce (df_b):*
+- Dataset loaded from '/content/Beyonce.csv'.
+3. *Billie Eilish (df_c):*
+- Dataset loaded from '/content/BillieEilish.csv'.
+4. *Ed Sheeran (df_d):*
+- Dataset loaded from '/content/EdSheeran.csv'.
+5. *Justin Bieber (df_e):*
+- Dataset loaded from '/content/JustinBieber.csv'.
+6. *Katy Perry (df_f):*
+- Dataset loaded from '/content/KatyPerry.csv'.
+7. *Charlie Puth (df_g):*
+- Dataset loaded from '/content/CharliePuth.csv'.
+8. *Maroon 5 (df_h):*
+- Dataset loaded from '/content/Maroon5.csv'.
+9. *Post Malone (df_i):*
+- Dataset loaded from '/content/PostMalone.csv'.
+10. *Rihanna (df_j):*
+- Dataset loaded from '/content/Rihanna.csv'.
+11. *Selena Gomez (df_k):*
+- Dataset loaded from '/content/SelenaGomez.csv'.
+12. *Coldplay (df_l):*
+- Dataset loaded from '/content/ColdPlay.csv'.
+13. *Drake (df_m):*
+- Dataset loaded from '/content/Drake.csv'.
+14. *Dua Lipa (df_n):*
+- Dataset loaded from '/content/DuaLipa.csv'.
 
-1. **Ariana Grande (df_a):**
-   - Dataset loaded from '/content/ArianaGrande.csv'.
 
-2. **Beyonce (df_b):**
-   - Dataset loaded from '/content/Beyonce.csv'.
-
-3. **Billie Eilish (df_c):**
-   - Dataset loaded from '/content/BillieEilish.csv'.
-
-4. **Ed Sheeran (df_d):**
-   - Dataset loaded from '/content/EdSheeran.csv'.
-
-5. **Justin Bieber (df_e):**
-   - Dataset loaded from '/content/JustinBieber.csv'.
-
-6. **Katy Perry (df_f):**
-   - Dataset loaded from '/content/KatyPerry.csv'.
-
-7. **Charlie Puth (df_g):**
-   - Dataset loaded from '/content/CharliePuth.csv'.
-
-8. **Maroon 5 (df_h):**
-   - Dataset loaded from '/content/Maroon5.csv'.
-
-9. **Post Malone (df_i):**
-   - Dataset loaded from '/content/PostMalone.csv'.
-
-10. **Rihanna (df_j):**
-    - Dataset loaded from '/content/Rihanna.csv'.
-
-11. **Selena Gomez (df_k):**
-    - Dataset loaded from '/content/SelenaGomez.csv'.
-
-12. **Coldplay (df_l):**
-    - Dataset loaded from '/content/ColdPlay.csv'.
-
-13. **Drake (df_m):**
-    - Dataset loaded from '/content/Drake.csv'.
-
-14. **Dua Lipa (df_n):**
-    - Dataset loaded from '/content/DuaLipa.csv'.
-```
 
 **Preprocessing:**
 - The 'Unnamed: 0' column is checked and renamed to 'S.no' if it exists. If not, a new 'S.no' column is added with sequential numbering.
