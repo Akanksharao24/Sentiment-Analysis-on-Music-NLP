@@ -1,41 +1,125 @@
-# Sentiment Analysis of Lyrics
+**README.md**
 
-## Introduction
+# Sentiment Analysis in Music Lyrics
 
-This project focuses on analyzing the sentiment of lyrics from various artists using Natural Language Processing (NLP) techniques. The sentiment analysis is performed using the VADER (Valence Aware Dictionary and sentiment Reasoner) sentiment analysis tool from the NLTK library. The goal is to understand the distribution of positive, negative, and neutral sentiments in the lyrics of different artists and to compare the sentiment percentages between selected artists.
+## 1. Problem Definition
 
-## Code Structure
+The problem addressed in this project is the analysis of sentiment in music lyrics to gain insights into the emotional content and themes expressed by different artists. Key aspects of the problem include:
 
-The code is organized into two main functions: `perform_sentiment_analysis` and `compare_sentiment_analysis`. Additionally, there is a section for reading datasets, user input, and a few utility functions.
+- **Understanding Emotion in Music:**
+  Music is a powerful medium for emotional expression, and artists often convey a range of sentiments through their lyrics.
 
-### `perform_sentiment_analysis`
+- **Comparative Analysis:**
+  Beyond individual analysis, the project seeks to compare the sentiment distributions among different artists, revealing patterns, trends, and unique characteristics.
 
-This function takes a DataFrame containing lyrics data for a specific artist and performs sentiment analysis on the lyrics using the VADER sentiment analyzer. The sentiment scores are then used to categorize the comments into positive, negative, and neutral sentiments. The results are displayed in both a pie chart and a bar graph for visual representation.
+- **User Interaction:**
+  The inclusion of a user interface allows for an interactive exploration of sentiment analysis, enabling users to choose between analyzing a single artist's sentiments or comparing sentiments between two artists.
 
-### `compare_sentiment_analysis`
+## 2. Existing Work
 
-This function compares the sentiment analysis results between two or more artists. It utilizes the `perform_sentiment_analysis` function for individual artists and then compares their sentiment percentages. The comparison results are displayed using bar graphs, providing a visual representation of the differences in sentiment distribution.
+### Sentiment Analysis in Text
 
-## Data and Artists
+Numerous studies and projects have focused on sentiment analysis in textual data across various domains, such as social media, product reviews, and news articles.
 
-The project uses lyrics datasets for multiple artists, including Ariana Grande, Beyonce, Billie Eilish, Ed Sheeran, Justin Bieber, Katy Perry, Charlie Puth, Maroon 5, Post Malone, Rihanna, Selena Gomez, Coldplay, Drake, and Dua Lipa. These datasets are read from CSV files, and the lyrics data is processed for sentiment analysis.
+### Music and Sentiment Analysis
 
-## Usage
+Existing work in this domain involves the use of natural language processing (NLP) tools, sentiment lexicons, and machine learning models tailored to the unique language and context of song lyrics.
 
-The user is prompted to choose between two options:
-1. Analyze the sentiment of a single artist.
-2. Compare the sentiment of two artists.
+### Comparative Music Analysis
 
-For option 1, the user selects an artist from the provided list, and the sentiment analysis results are displayed, including visual representations.
+While comparative studies in music analysis often focus on genre classification and artist similarity, the specific exploration of sentiment across multiple artists is a less-explored area.
 
-For option 2, the user selects two artists from the list, and the sentiment analysis results are compared and displayed in a bar graph. Additionally, the code provides a detailed comparison between the selected artists based on positive, negative, and neutral sentiment percentages.
+### User Interface for Sentiment Analysis
 
-## Visualizations
+Incorporating a user-friendly interface for the specific domain of music lyrics sentiment analysis aligns with the goal of making the tool accessible and customizable for users with varying preferences and interests.
 
-The project includes visualizations such as pie charts and bar graphs to better understand the distribution of sentiment in lyrics. These visualizations aim to provide a clear overview of the sentiments present in the lyrics of each artist and facilitate easy comparison between selected artists.
+## 3. Data Sets Used
 
-## Conclusion
+The code uses multiple datasets, each representing the song lyrics of a specific artist. The datasets are loaded using the Pandas library and are in CSV format.
 
-This sentiment analysis project provides insights into the emotional tone of lyrics from various artists. The comparison feature allows users to explore and understand the differences in sentiment distribution between two selected artists. The code can be further extended to include more artists or additional features for a more comprehensive analysis.
+- *Ariana Grande (df_a):* Dataset loaded from '/content/ArianaGrande.csv'.
+- *Beyonce (df_b):* Dataset loaded from '/content/Beyonce.csv'.
+- ... (similar entries for other artists)
 
-The provided Python script, when run, enables users to interactively explore and compare sentiment analysis results for lyrics of different artists.
+**Preprocessing:**
+- The 'Unnamed: 0' column is checked and renamed to 'S.no' if it exists. If not, a new 'S.no' column is added with sequential numbering.
+- The sentiment scores and other relevant information are stored in DataFrames for further analysis.
+
+## 4. Environment
+
+The sentiment analysis scripts were developed and executed in a Python environment. The primary frameworks and libraries used for this project include:
+
+1. **Python Version:** Python 3.10.12
+2. **Pandas:** For data manipulation and analysis.
+3. **NLTK (Natural Language Toolkit):** Specifically, the VADER sentiment analysis tool.
+4. **Matplotlib:** For creating various charts and graphs.
+5. **NumPy:** For numerical operations and array manipulations.
+6. **TQDM:** To display progress bars.
+
+## 5. Algorithmic Approach
+
+### Step 1: Load and Preprocess the Data
+
+- Import necessary Python libraries.
+- Read CSV files containing lyrics data for multiple artists.
+- Handle missing values and initialize the SentimentIntensityAnalyzer from NLTK.
+
+### Step 2: Perform Sentiment Analysis for Individual Artists
+
+- Iterate through lyrics for each artist and compute compound sentiment scores.
+- Store sentiment scores in a Pandas DataFrame.
+- Visualize sentiment distribution with a pie chart and compound scores with a bar graph.
+- Display results, including the percentage of positive, negative, and neutral sentiments.
+
+### Step 3: Compare Sentiment Analysis Across Artists
+
+- For each pair of artists, repeat the sentiment analysis process.
+- Store results for comparison and visualize using a bar chart.
+- Display results, highlighting the percentage of each sentiment for each artist.
+
+### Step 4: User Interaction
+
+- Allow users to interactively choose analysis options.
+- Prompt users to choose artists for analysis or comparison.
+
+### Step 5: Visualization
+
+- Utilize Matplotlib to create pie charts and bar graphs for visualizing sentiment distributions.
+
+### Step 6: Results Compilation and Display
+
+- Store sentiment analysis results in structured data frames.
+- Display results, including percentages and visualizations, to the user.
+
+## 6. Result
+
+### Individual Sentiment Analysis
+
+- Pie Chart: Distribution of positive, negative, and neutral sentiments.
+- Bar Graph: Compound sentiment scores for each lyric.
+
+### Comparison Sentiment Analysis
+
+- Bar Chart: Comparison of positive, negative, and neutral sentiment percentages.
+
+### Results Compilation
+
+- Structured data frames with percentages of positive, negative, and neutral sentiments for each artist.
+
+### User Interaction
+
+- Interactive interface allowing users to choose analysis options and artists for exploration.
+
+### Result Example (Comparison)
+
+- ![image](https://github.com/Akanksharao24/Sentiment-Analysis-on-Music-NLP/assets/108931784/353f4a2d-5e0a-49c9-9ace-336e97401300)
+- ![image](https://github.com/Akanksharao24/Sentiment-Analysis-on-Music-NLP/assets/108931784/0ec62945-16bd-4493-b1be-72ca0f182cfe)
+- ![image](https://github.com/Akanksharao24/Sentiment-Analysis-on-Music-NLP/assets/108931784/928ca05d-8aba-479c-92d0-8c1dda34a00d)
+- ![image](https://github.com/Akanksharao24/Sentiment-Analysis-on-Music-NLP/assets/108931784/ed706fb8-1c36-404c-95b0-93463500703b)
+- ![image](https://github.com/Akanksharao24/Sentiment-Analysis-on-Music-NLP/assets/108931784/7e052d8c-b1e8-46a2-b0d3-181f379fdb43)
+
+
+
+
+
+
